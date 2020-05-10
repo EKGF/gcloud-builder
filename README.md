@@ -3,7 +3,8 @@
 Google Cloud Build builder image with some additional tools:
 
 - curl
-- jq
+- jq (for processing JSON files)
+- yq (for processing YAML files)
 - unzip zip
 - gnupg
 - rsync
