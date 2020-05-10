@@ -42,3 +42,9 @@ ENV GPG_TTY=/dev/console
 
 ENV GIT_DISCOVERY_ACROSS_FILESYSTEM=1
 ENV ANSI_ON=0
+#
+# This image name var can be used in scripts to check whether
+# we're running in the context of this builder container
+#
+ENV IMAGE_NAME=docker.io/ekgf/gcloud-builder
+
