@@ -8,6 +8,8 @@ ARG SOPS_VERSION=3.5.0
 ENV SOPS_VERSION=${SOPS_VERSION}
 ENV SOPS_DEB_URL="https://github.com/mozilla/sops/releases/download/v${SOPS_VERSION}/sops_${SOPS_VERSION}_amd64.deb"
 
+ENV YQ_VERSION=3.3.0
+
 COPY helm.sh /builder/helm.sh
 
 #
@@ -26,6 +28,9 @@ RUN chmod u+x /builder/helm.sh && \
     dpkg -i sops.deb && \
     apt-get install -y -f && \
     /builder/helm/helm plugin install https://github.com/futuresimple/helm-secrets && \
+    curl -L "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64" -o /usr/bin/yq && \
+    chmod +x /usr/bin/yq && \
+    yq --version && \
     apt-get --purge -y autoremove && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/*
