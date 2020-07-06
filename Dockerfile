@@ -1,6 +1,6 @@
 FROM gcr.io/cloud-builders/gcloud:latest
 
-ARG HELM_VERSION=v3.1.2
+ARG HELM_VERSION=v3.2.4
 ENV HELM_VERSION=$HELM_VERSION
 ENV HELM_HOME=/builder/helm
 
@@ -8,7 +8,7 @@ ARG SOPS_VERSION=3.5.0
 ENV SOPS_VERSION=${SOPS_VERSION}
 ENV SOPS_DEB_URL="https://github.com/mozilla/sops/releases/download/v${SOPS_VERSION}/sops_${SOPS_VERSION}_amd64.deb"
 
-ENV YQ_VERSION=3.3.0
+ENV YQ_VERSION=3.3.2
 
 COPY helm.sh /builder/helm.sh
 
@@ -47,4 +47,7 @@ ENV ANSI_ON=0
 # we're running in the context of this builder container
 #
 ENV IMAGE_NAME=docker.io/ekgf/gcloud-builder
+
+RUN set -x ; which bash ; bash --version
+
 
