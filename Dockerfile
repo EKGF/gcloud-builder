@@ -19,7 +19,7 @@ RUN chmod u+x /builder/helm.sh && \
     set -ex && \
     uname -a && \
     apt-get -y update && \
-    apt-get -y install apt-utils ca-certificates curl jq unzip zip gnupg rsync && \
+    apt-get -y install apt-utils bats ca-certificates curl jq unzip zip gnupg rsync && \
     mkdir -p /builder/helm/plugins /app/keys && \
     curl -SL https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz -o helm.tar.gz && \
     tar zxvf helm.tar.gz --strip-components=1 -C /builder/helm linux-amd64 && \

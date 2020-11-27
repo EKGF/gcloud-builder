@@ -9,6 +9,7 @@ Google Cloud Build builder image with some additional tools:
 - gnupg
 - rsync
 - helm
+- bats
 
 ## Building this builder
 
