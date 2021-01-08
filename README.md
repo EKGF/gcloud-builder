@@ -13,6 +13,8 @@ Google Cloud Build builder image with some additional tools:
 
 ## Building this builder
 
+CI is in [Docker Hub](https://hub.docker.com/repository/docker/ekgf/gcloud-builder/builds).
+
 To build it locally:
 
 ```

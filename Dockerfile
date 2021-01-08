@@ -8,7 +8,7 @@ ARG SOPS_VERSION=3.5.0
 ENV SOPS_VERSION=${SOPS_VERSION}
 ENV SOPS_DEB_URL="https://github.com/mozilla/sops/releases/download/v${SOPS_VERSION}/sops_${SOPS_VERSION}_amd64.deb"
 
-ENV YQ_VERSION=3.3.2
+ENV YQ_VERSION=4.2.1
 
 COPY helm.sh /builder/helm.sh
 
@@ -44,7 +44,7 @@ ENV GIT_DISCOVERY_ACROSS_FILESYSTEM=1
 ENV ANSI_ON=0
 #
 # This image name var can be used in scripts to check whether
-# we're running in the context of this builder container
+# we're running in the context of this builder container
 #
 ENV IMAGE_NAME=docker.io/ekgf/gcloud-builder
 
