@@ -8,7 +8,7 @@ ARG SOPS_VERSION=3.5.0
 ENV SOPS_VERSION=${SOPS_VERSION}
 ENV SOPS_DEB_URL="https://github.com/mozilla/sops/releases/download/v${SOPS_VERSION}/sops_${SOPS_VERSION}_amd64.deb"
 
-ENV YQ_VERSION=4.2.1
+ENV YQ_VERSION=v4.2.1
 
 COPY helm.sh /builder/helm.sh
 
