@@ -10,6 +10,7 @@ Google Cloud Build builder image with some additional tools:
 - rsync
 - helm
 - bats
+- pkgdiff
 
 ## Building this builder
 

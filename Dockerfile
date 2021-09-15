@@ -31,6 +31,8 @@ RUN chmod u+x /builder/helm.sh && \
     curl -L "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64" -o /usr/bin/yq && \
     chmod +x /usr/bin/yq && \
     yq --version && \
+    apt-get install -y pkgdiff && \
+    pkgdiff --version && \
     apt-get --purge -y autoremove && \
     apt-get clean -y && \
     rm -rf /var/lib/apt/lists/*
@@ -49,5 +51,3 @@ ENV ANSI_ON=0
 ENV IMAGE_NAME=docker.io/ekgf/gcloud-builder
 
 RUN set -x ; which bash ; bash --version
-
-

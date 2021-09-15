@@ -1,2 +1,4 @@
 image.id
 *.code-workspace
+*.iml
+.idea/
