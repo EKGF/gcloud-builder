@@ -1,6 +1,6 @@
 FROM gcr.io/cloud-builders/gcloud:latest
 
-ARG HELM_VERSION=v3.2.4
+ARG HELM_VERSION=v3.4.1
 ENV HELM_VERSION=$HELM_VERSION
 ENV HELM_HOME=/builder/helm
 
