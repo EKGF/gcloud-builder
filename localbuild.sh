@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 _IMAGE_NAME="docker.io/ekgf/gcloud-builder"
 _IMAGE_VERSION="latest"
-_MANUALLY_INCREMENTED_IMAGE_VERSION="0.0.9"
+_MANUALLY_INCREMENTED_IMAGE_VERSION="0.1.0"
 
 docker build . \
   --iidfile=image.id \
