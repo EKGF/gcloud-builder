@@ -16,9 +16,9 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          repository: ekgf/gcloud-terraform
+          repository: ekgf/gcloud-builder
           #
           # TODO: Get the version number from a file (for instance localbuild.sh) or "/VERSION"
           #
-          tags: latest, 0.0.10
+          tags: latest, 0.0.11
           always_pull: true
