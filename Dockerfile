@@ -1,14 +1,14 @@
 FROM gcr.io/cloud-builders/gcloud:latest
 
-ARG HELM_VERSION=v3.4.1
+ARG HELM_VERSION=v3.7.1
 ENV HELM_VERSION=$HELM_VERSION
 ENV HELM_HOME=/builder/helm
 
-ARG SOPS_VERSION=3.5.0
+ARG SOPS_VERSION=3.7.1
 ENV SOPS_VERSION=${SOPS_VERSION}
 ENV SOPS_DEB_URL="https://github.com/mozilla/sops/releases/download/v${SOPS_VERSION}/sops_${SOPS_VERSION}_amd64.deb"
 
-ENV YQ_VERSION=v4.13.3
+ENV YQ_VERSION=v4.14.2
 
 COPY helm.sh /builder/helm.sh
 
@@ -39,7 +39,7 @@ RUN chmod u+x /builder/helm.sh && \
 
 ENV PATH=/builder/helm/:$PATH
 
-ENV GCS_PLUGIN_VERSION=0.3.0
+ENV GCS_PLUGIN_VERSION=0.3.18
 ENV GPG_TTY=/dev/console
 
 ENV GIT_DISCOVERY_ACROSS_FILESYSTEM=1
