@@ -20,5 +20,5 @@ jobs:
           #
           # TODO: Get the version number from a file (for instance localbuild.sh) or "/VERSION"
           #
-          tags: latest, 0.1.1
+          tags: latest, 0.0.10
           always_pull: true
